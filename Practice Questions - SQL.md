@@ -64,10 +64,46 @@ Your output should have 3 columns as given below:
 
 ### Database Schema:
 
-This query requires a single table containing student personal and contact details.
-
 | Table Name | Key Column | Other Columns |
 | :--- | :--- | :--- |
 | **STUDENTS** | `Student_ID` (PK) | `First_Name`, `Email`, ... |
 
 ---
+
+## SQL Question 5: Customer Order Status
+
+Write an SQL query to display:
+The **names** (use the alias **First Name**) and the **status of the items** ordered by customers with names starting with **'C'**.
+
+Your output should have 2 columns as given below:
+
+| First Name | Status |
+| :---: | :---: |
+
+### Database Schema:
+
+| Table Name | Key Column | Other Columns |
+| :--- | :--- | :--- |
+| **CUSTOMERS** | `Customer_ID` (PK) | `First_Name`, `Last_Name`, ... |
+| **ORDERS** or **ITEMS** | `Order_ID` (PK) | `Customer_ID` (FK), `Status` (e.g., 'Shipped', 'Processing'), ... |
+
+---
+
+## SQL Question 6: Lecture Timings
+
+Write an SQL query to display:
+All the **lecture timings on Friday** encoded as 'fr' (use alias **Timings**).
+
+**Hint**: Lecture timings are a combination of start and end time in the below format:
+`starttime-endtime`
+
+Your output should have 1 column as given below:
+
+| Timings |
+| :---: |
+
+### Database Schema:
+
+| Table Name | Key Column | Other Columns |
+| :--- | :--- | :--- |
+| **SCHEDULE** | `Lecture_ID` (PK) | `Day_of_Week` (e.g. 'Friday'), `Start_Time`, `End_Time`, ... |
